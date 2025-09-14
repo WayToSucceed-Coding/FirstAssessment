@@ -1,0 +1,345 @@
+{
+    "moduleName": "Module 1.0",
+    "topics": [
+        {
+            "name": "Python Fundamentals",
+            "description": "Covers basic Python concepts including comments, input/output, and data types.",
+            "mcqs": [
+                {
+                    "question": "What is the correct way to write a comment in Python?",
+                    "options": [
+                        "#Comment",
+                        "//Comment",
+                        "/*Comment*/",
+                        "<!--Comment-->"
+                    ],
+                    "answer": 0,
+                    "explanation": "In Python, comments start with a # symbol."
+                },
+                {
+                    "question": "What does input() function do?",
+                    "options": [
+                        "Prints output.",
+                        "Converts a value to an integer.",
+                        "Ends a program.",
+                        "Takes input."
+                    ],
+                    "answer": 3,
+                    "explanation": "The input() function takes input from the user as a string."
+                },
+                {
+                    "question": "What will be the output of the following code?\n\nprint(type(42))",
+                    "options": [
+                        "<class 'float'>",
+                        "<class 'int'>",
+                        "<class 'str'>",
+                        "<class 'bool'>"
+                    ],
+                    "answer": 1,
+                    "explanation": "42 is an integer, so type(42) returns <class 'int'>."
+                },
+                {
+                    "question": "What will be the output of the following code?\n\nname = \"Aman\"\nprint(\"Hello, \" + name + \"!\")",
+                    "options": [
+                        "Hello, Aman!",
+                        "Hello name!",
+                        "Hello, Aman",
+                        "Syntax Error"
+                    ],
+                    "answer": 0,
+                    "explanation": "The string concatenation combines 'Hello, ' and the value of name, resulting in 'Hello, Aman!'."
+                }
+            ],
+            "codeTasks": [
+                {
+                    "question": "Write a program that:\n\n1. Asks the user to enter their favorite color using input() and store it in a variable called `color`.\n2. Prints a message in this exact format: `Your favorite color is <color>!`",
+                    "starterCode": "# Step 1: Ask the user for their favorite color and store in `color`\n\n# Step 2: Print the message 'Your favorite color is <color>!'",
+                    "solutionCode": "color = input('Enter your favorite color: ')\nprint('Your favorite color is', color + '!')",
+                    "expectedOutput": "Example 1 Input: 'Blue' → Output: 'Your favorite color is Blue!'\nExample 2 Input: 'Red' → Output: 'Your favorite color is Red!'",
+                    "testCases": [
+                        {
+                            "mode": "io",
+                            "input": [
+                                "Blue"
+                            ],
+                            "expected": "Your favorite color is Blue!\n"
+                        },
+                        {
+                            "mode": "io",
+                            "input": [
+                                "Red"
+                            ],
+                            "expected": "Your favorite color is Red!\n"
+                        }
+                    ],
+                    "structureRequirements": {
+                        "variables": [
+                            "color"
+                        ],
+                        "mustUseInput": true,
+                        "mustUsePrint": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Operators and Conditional Statements",
+            "description": "Covers arithmetic, relational, logical operators, and conditional programming.",
+            "mcqs": [
+                {
+                    "question": "What will be the output of the following code?\n\nprint(45%2)",
+                    "options": [
+                        "0",
+                        "1",
+                        "22",
+                        "22.5"
+                    ],
+                    "answer": 1,
+                    "explanation": "45 % 2 calculates the remainder when 45 is divided by 2, which is 1."
+                },
+                {
+                    "question": "What will be the output of the following code?\n\nprint(10/2)",
+                    "options": [
+                        "0",
+                        "1",
+                        "5",
+                        "2"
+                    ],
+                    "answer": 2,
+                    "explanation": "10 divided by 2 is 5.0, but in integer division context it is 5."
+                },
+                {
+                    "question": "What will be the output of the following code?\n\nprint(3**3)",
+                    "options": [
+                        "9",
+                        "6",
+                        "1",
+                        "27"
+                    ],
+                    "answer": 3,
+                    "explanation": "3**3 means 3 to the power of 3, which is 27."
+                },
+                {
+                    "question": "What is the datatype of the value returned by the input() function?",
+                    "options": [
+                        "str",
+                        "int",
+                        "float",
+                        "Depends on what the user has entered"
+                    ],
+                    "answer": 0,
+                    "explanation": "input() always returns a string."
+                },
+                {
+                    "question": "What can be used to make decisions in programming?",
+                    "options": [
+                        "print()",
+                        "input()",
+                        "if statement",
+                        "None of the above"
+                    ],
+                    "answer": 2,
+                    "explanation": "The if statement allows conditional execution based on a condition."
+                },
+                {
+                    "question": "Which operator is used to check if 2 values are not equal?",
+                    "options": [
+                        "==",
+                        "!=",
+                        "<",
+                        ">"
+                    ],
+                    "answer": 1,
+                    "explanation": "!= checks if two values are not equal."
+                },
+                {
+                    "question": "What does the == operator do in Python?",
+                    "options": [
+                        "Assigns a value to a variable",
+                        "Checks if two values are equal",
+                        "Checks if two values are not equal",
+                        "Compares if one value is greater than another"
+                    ],
+                    "answer": 1,
+                    "explanation": "== checks for equality between two values."
+                },
+                {
+                    "question": "The and operator returns True if ______",
+                    "options": [
+                        "Any one condition is True",
+                        "All the conditions are True",
+                        "At least two conditions are True",
+                        "None of the above"
+                    ],
+                    "answer": 1,
+                    "explanation": "and returns True only if all conditions are True."
+                },
+                {
+                    "question": "What does the or operator do in Python?",
+                    "options": [
+                        "Returns True if both conditions are true",
+                        "Returns True if at least one condition is true",
+                        "Returns False if both conditions are false",
+                        "Both b and c"
+                    ],
+                    "answer": 3,
+                    "explanation": "or returns True if at least one condition is True; returns False only if all conditions are False."
+                },
+                {
+                    "question": "Which of the following statements is true about the not operator?",
+                    "options": [
+                        "It reverses the value of a relational operator.",
+                        "It checks if a condition is false.",
+                        "It combines two conditions where both must be true.",
+                        "It does nothing."
+                    ],
+                    "answer": 1,
+                    "explanation": "not reverses the Boolean value of a condition."
+                }
+            ],
+            "codeTasks": [
+                {
+                    "question": "Complete the program to compare two numbers and print which one is greater, or if they are equal.\n\nCode given:\n\nnum1 = int(input('Enter first number: '))\nnum2 = int(input('Enter second number: '))\n\nYour task:\n1. Write an if statement to check if num1 is greater than num2. If true, print 'First number is greater'.\n2. Write an elif statement to check if num2 is greater than num1. If true, print 'Second number is greater'.\n3. Write an else block to handle the case when both numbers are equal. Print 'Both are equal'.",
+                    "starterCode": "num1 = int(input('Enter first number: '))\nnum2 = int(input('Enter second number: '))\n\n# Write your code here",
+                    "expectedOutput": "Example 1 Input: 10, 5 → Output: First number is greater\nExample 2 Input: 7, 12 → Output: Second number is greater\nExample 3 Input: 8, 8 → Output: Both are equal",
+                    "solutionCode": "num1 = int(input('Enter first number: '))\nnum2 = int(input('Enter second number: '))\n\nif num1 > num2:\n    print('First number is greater')\nelif num2 > num1:\n    print('Second number is greater')\nelse:\n    print('Both are equal')",
+                    "testCases": [
+                        {
+                            "mode": "io",
+                            "input": [
+                                "10",
+                                "5"
+                            ],
+                            "expected": "First number is greater\n"
+                        },
+                        {
+                            "mode": "io",
+                            "input": [
+                                "7",
+                                "12"
+                            ],
+                            "expected": "Second number is greater\n"
+                        },
+                        {
+                            "mode": "io",
+                            "input": [
+                                "8",
+                                "8"
+                            ],
+                            "expected": "Both are equal\n"
+                        }
+                    ],
+                    "structureRequirements": {
+                        "mustUseIf": true,
+                        "mustUseElif": true,
+                        "mustUseElse": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Strings and String Methods",
+            "description": "Covers string formatting, slicing, concatenation, and common string methods like upper() and strip().",
+            "mcqs": [
+                {
+                    "question": "What will the following code print?\n\nname=\"Neha\"\nprint(f\"Hello, {name}!\")",
+                    "options": [
+                        "Hello, Neha!",
+                        "Hello, {name}!",
+                        "Hello, name!",
+                        "None of the above"
+                    ],
+                    "answer": 0,
+                    "explanation": "f-strings replace the variable {name} with its value."
+                },
+                {
+                    "question": "Which of the following is NOT a valid string?",
+                    "options": [
+                        "\"Hello, World!\"",
+                        "'Hello, World!'",
+                        "\"\"\"Hello, World!\"\"\"",
+                        "Hello, World!"
+                    ],
+                    "answer": 3,
+                    "explanation": "A string must be enclosed in quotes; 'Hello, World!' without quotes is invalid."
+                },
+                {
+                    "question": "What will be the output of the following code?\n\nsentence='How are you?'\nprint(sentence[2:5])",
+                    "options": [
+                        "w ar",
+                        "ow are",
+                        "ow a",
+                        "w a"
+                    ],
+                    "answer": 3,
+                    "explanation": "Indexing starts from 0. sentence[2:5] gives characters at positions 2,3,4 which are 'w a'."
+                },
+                {
+                    "question": "Which operator is used to concatenate strings in Python?",
+                    "options": [
+                        "*",
+                        "&",
+                        "|",
+                        "+"
+                    ],
+                    "answer": 3,
+                    "explanation": "+ is used to concatenate strings."
+                },
+                {
+                    "question": "Which method is used to convert a string to uppercase?",
+                    "options": [
+                        "s.upperCase()",
+                        "s.upper()",
+                        "s.to_upper()",
+                        "s.toUpper()"
+                    ],
+                    "answer": 1,
+                    "explanation": "s.upper() converts the string s to uppercase."
+                },
+                {
+                    "question": "Which method removes whitespace from the beginning and end of a string?",
+                    "options": [
+                        ".strip()",
+                        ".remove()",
+                        ".cut()",
+                        ".clear()"
+                    ],
+                    "answer": 0,
+                    "explanation": ".strip() removes leading and trailing whitespace."
+                }
+            ],
+            "codeTasks": [
+                {
+                    "question": "Complete the program to display a movie title with swapped cases.\n\nCode given:\n\nmovie = input('Enter your favorite movie: ')\n\nYour task:\n1. Use the string method `swapcase()` on the variable `movie`.\n2. Store the result in a variable called `swapped_movie`.\n3. Print the result in this exact format: 'Your movie with swapped cases: <swapped_movie>'.",
+                    "starterCode": "movie = input('Enter your favorite movie: ')\n\n# Write your code here",
+                    "expectedOutput": "Example 1 Input: 'Inception' → Output: Your movie with swapped cases: iNCEPTION\nExample 2 Input: 'TITANIC' → Output: Your movie with swapped cases: titanic",
+                    "solutionCode": "movie = input('Enter your favorite movie: ')\n\nswapped_movie = movie.swapcase()\nprint('Your movie with swapped cases:', swapped_movie)",
+                    "testCases": [
+                        {
+                            "mode": "io",
+                            "input": [
+                                "Inception"
+                            ],
+                            "expected": "Your movie with swapped cases: iNCEPTION\n"
+                        },
+                        {
+                            "mode": "io",
+                            "input": [
+                                "TITANIC"
+                            ],
+                            "expected": "Your movie with swapped cases: titanic\n"
+                        }
+                    ],
+                    "structureRequirements": {
+                        "mustUseVariables": [
+                            "swapped_movie"
+                        ],
+                        "mustUseStringMethods": [
+                            "swapcase"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
