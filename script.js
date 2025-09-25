@@ -1336,6 +1336,7 @@ function generateTopicQuestionResults(showAnswers = true) {
                     <pre>${escapeForPre(answer.answer)}</pre>
                     ${solutionBlock}
                  </div>`;
+
             }
         }
 
@@ -1717,7 +1718,7 @@ async function downloadOverallResultsPdf() {
                 yourAnswer = a.answer === undefined ? 'Unanswered' : item.data.options[a.answer] || a.answer;
                 correctAnswer = item.data.options[item.data.answer];
             } else {
-                yourAnswer = a.answer === undefined ? 'Unanswered' : escapeForPre(a.answer);
+                yourAnswer = a.answer === undefined ? 'Unanswered' : a.answer;
                 correctAnswer = item.data.solutionCode || 'Function that passes all test cases';
             }
 
