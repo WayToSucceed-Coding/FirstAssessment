@@ -1064,11 +1064,10 @@ function finishTopicAssessment() {
         popup.style.display = 'flex';
         const answeredStatus = document.getElementById('answeredStatus')
         const myCurrentTopic = currentModuleData.topics[currentTopicIndex].name;
-        
+        var temp = new Map(JSON.parse(localStorage.getItem('answeredMap') || '{}'))
         const filteredPairs = new Map();
 
-        for (const [key, value] of answeredMap.entries()) {
-            console.log(value)
+        for (const [key, value] of temp.entries()) {
             if (value.topic === myCurrentTopic) {
                 filteredPairs.set(key, value);
             }
